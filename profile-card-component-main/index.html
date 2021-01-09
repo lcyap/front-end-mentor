@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      box-sizing: border-box;
+      margin:0;
+      padding: 0;
+    }
+    html{
+      background:hsl(185, 75%, 39%);
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+    html::before{
+      content: url(/images/bg-pattern-top.svg);
+      position: absolute;
+      top: -50%;
+      
+    }
+    html::after{
+      content: url(/images/bg-pattern-bottom.svg);
+      position: absolute;
+      bottom: -50%;
+      right: 0%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .container{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .profile-card{
+      background: #fff;
+      width: 300px;
+      height: 340px;
+      border-radius: 15px;
+    }
+    .banner img{
+      width:300px;
+      border-radius: 15px 15px 0 0;
+    }
+    .pic-container img{
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5px;
+      background-color: white;
+      border-radius: 50%;
+      height: -50%;
+    }
+    .pic-container{
+      height: 0px;
+    }
+    .nameloc-container{
+      padding-top: 70px;
+      display: block;
+      text-align: center;
+
+    }
+    .name{
+      font-weight: 700;
+      margin: 10px 5px;
+    }
+    .age{
+      color:hsl(227, 10%, 46%)
+    }
+    .location{
+      padding: 10px;
+      font-size: .8em;
+      color:hsl(227, 10%, 46%)
+    }
+    .stats-container{
+      border-top: .05px solid hsl(230, 13%, 82%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .stat{
+      padding: 20px;
+    }
+    .numbers{
+      font-weight: 700;
+    }
+    .label{
+      font-size: .6em;
+      letter-spacing: 2px;
+      padding-top: 5px;
+      color:hsl(227, 10%, 46%)
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-card">
+        <div class="banner">
+          <img src="images/bg-pattern-card.svg">
+        </div>
+        <div class="pic-container">
+           <img src="images/image-victor.jpg">
+          
+        </div>
+        <div class="nameloc-container">
+            <span class="name"> Victor Crest</span>
+            <span class="age">26</span>
+            <p class="location">London</p>
+        </div>
+        <div class="stats-container">
+            <div class="stat">
+                <div class="numbers">80K</div>
+                <div class="label">Followers</div>
+            </div>
+            <div class="stat">
+                <div class="numbers">803K
+                </div>
+                <div class="label">Likes</div>
+            </div>
+            <div class="stat">
+                <div class="numbers">1.4K</div>
+                <div class="label">Photos</div>
+            </div>
+        </div>
+    </div>
+</div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
